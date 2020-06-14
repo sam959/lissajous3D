@@ -11,13 +11,14 @@ void ofApp::setup(){
 
     // VBO
     ofSpherePrimitive tempSphere;
-    tempSphere.setRadius(1);
+    tempSphere.setRadius(6);
+    tempSphere.setResolution(6);
 
     vboSphere = tempSphere.getMesh();
     mShdInstanced = shared_ptr<ofShader>(new ofShader());
     mShdInstanced->load("shaders/instanced.vert", "shaders/instanced.frag");
 
-    numberOfElements = 250;
+    numberOfElements = 600;
     freqX = 1.0;
     freqY = 1.0;
     freqZ = 0.0;
